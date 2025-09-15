@@ -81,3 +81,28 @@ Java_Selenium_Project/
 2. Install **Maven** and ensure it is added to your system `PATH`.
    ```bash
    mvn -v
+
+# 1. configure git (if needed)
+git config --global user.name "YuvaKiran"
+git config --global user.email "youremail@example.com"
+
+# 2. init and push
+cd C:\Users\bhanu\Yuva\Projects\Java_Selenium_Project
+git init
+git checkout -b main
+git add .
+git commit -m "Initial commit: Java Selenium Project with TestNG and CSV-driven tests"
+git remote add origin https://github.com/<your-username>/Java_Selenium_Project.git
+git push -u origin main
+
+# 3. add workflow
+# (create .github/workflows/maven.yml as shown, then:)
+git add .github/workflows/maven.yml
+git commit -m "Add GitHub Actions CI workflow"
+git push
+
+# 4. fix BaseTest, commit & push
+# (apply BaseTest code above)
+git add src/test/java/tests/BaseTest.java
+git commit -m "Make BaseTest CI-friendly (headless on CI)"
+git push
